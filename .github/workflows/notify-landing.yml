@@ -13,8 +13,14 @@ jobs:
       - name: Trigger the landing site to pull the latest docs
         if: ${{ env.LANDING_DISPATCH_TOKEN != '' }}
         run: |
-          curl -sf -X POST \
+          status=$(curl -s -o /tmp/resp.json -w "%{http_code}" -X POST \
             -H "Authorization: Bearer $LANDING_DISPATCH_TOKEN" \
             -H "Accept: application/vnd.github+json" \
             https://api.github.com/repos/nmbrthirteen/podcli-landing/dispatches \
-            -d '{"event_type":"docs-updated"}'
+            -d '{"event_type":"docs-updated"}')
+          echo "GitHub responded $status"
+          if [ "$status" != "204" ]; then
+            cat /tmp/resp.json || true
+            echo "::error::Dispatch failed ($status). LANDING_DISPATCH_TOKEN needs write access to nmbrthirteen/podcli-landing: a classic PAT with the 'repo' scope, or a fine-grained PAT that includes podcli-landing with Contents: read and write."
+            exit 1
+          fi
