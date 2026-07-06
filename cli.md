@@ -43,8 +43,14 @@ podcli process episode.mp4 --no-thumbnails
 | `--caption-style <style>` | `branded`, `hormozi`, `karaoke`, or `subtle`. See [captions and formats](/docs/captions-and-formats). |
 | `--crop <mode>` | `center`, `face`, or `speaker`. |
 | `--format <ratio>` | `vertical` (9:16), `horizontal` (16:9), or `square` (1:1). |
-| `--logo <file>` | Bake a logo onto every clip. |
+| `--logo <asset or file>` | Overlay a logo on every clip. Accepts a registered asset name or a path. |
+| `--intro <asset or file>` | Prepend an intro video before every clip. |
+| `--outro <asset or file>` | Append an outro video after every clip. |
 | `--thumbnails` / `--no-thumbnails` | Force thumbnail generation on or off. |
+
+Logo, intro, and outro all accept a **registered asset name** (see [Assets](#assets))
+or a direct file path. Leave them off to use whatever you've marked as the
+default asset.
 
 ## Presets
 
@@ -54,6 +60,29 @@ Save a set of render settings once and reuse it:
 podcli presets save my-show
 podcli process episode.mp4 --preset my-show
 ```
+
+## Assets
+
+Register logos, outros, intros, and music once, then reference them by name
+anywhere. The same library backs the [studio Assets page](/docs/the-studio#assets)
+and the `manage_assets` [MCP tool](/docs/mcp-server).
+
+```bash
+podcli assets add my-logo ~/branding/logo.png       # register a file by name
+podcli assets add-url outro https://example.com/outro.mp4   # download and register
+podcli assets default my-logo                        # make it the default logo
+podcli assets list                                   # show everything, defaults marked
+podcli assets export my-logo ~/Desktop/logo.png      # copy a registered asset out
+```
+
+Then use a name instead of a path:
+
+```bash
+podcli process episode.mp4 --logo my-logo --intro show-intro --outro outro
+```
+
+Other actions: `podcli assets rename <old> <new>`, `podcli assets undefault
+<name>`, and `podcli assets remove <name>`.
 
 ## Other commands
 
