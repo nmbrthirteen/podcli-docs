@@ -36,17 +36,17 @@ Then run `podcli` and choose Open Web UI. The studio opens at
 podcli
 ```
 
-Prefer the terminal? Everything here also works from the [CLI](/docs/cli).
+Prefer the terminal? Everything here also works from the [CLI](https://podcli.com/docs/cli).
 
 ## 1. Drop in your episode
 
 Open the studio and go to **New episode**. Drag in a local video, or paste a
 YouTube or direct link and Podcli downloads it. Pick a transcript engine
 (Whisper, or paste your own), then set caption style, crop, and format, and drop
-in a logo, intro, or outro from your [brand kit](/docs/the-studio#assets). The
+in a logo, intro, or outro from your [brand kit](https://podcli.com/docs/the-studio#assets). The
 phone preview updates live.
 
-![The New episode page: video input, transcript engine, caption and format settings, and a live 9:16 preview.](/docs/studio-new-episode.png)
+![The New episode page: video input, transcript engine, caption and format settings, and a live 9:16 preview.](https://podcli.com/docs/studio-new-episode.png)
 
 ## 2. Get clips automatically
 
@@ -55,7 +55,7 @@ worth clipping, and cuts filler into multi-segment clips. Every clip comes out
 captioned, framed on the speaker, and on-brand. Review them in the **Library**,
 grouped by episode.
 
-![The Library grouping generated clips by episode, each card a captioned vertical thumbnail.](/docs/studio-library.png)
+![The Library grouping generated clips by episode, each card a captioned vertical thumbnail.](https://podcli.com/docs/studio-library.png)
 
 ## 3. Generate the content package
 
@@ -63,7 +63,7 @@ Open any clip for a publish-ready package: title options, a description, tags,
 hashtags, and a thumbnail you can regenerate or reframe. Copy what you need, or
 change the caption style and re-render.
 
-![A clip detail page with title options, description, tags, hashtags, and a thumbnail editor.](/docs/studio-clip-detail.png)
+![A clip detail page with title options, description, tags, hashtags, and a thumbnail editor.](https://podcli.com/docs/studio-clip-detail.png)
 
 ## 4. Track what actually works
 
@@ -71,11 +71,11 @@ Link clips to YouTube and sync views, retention, and CTR back into the studio.
 **Analytics** shows what holds viewers by content type, caption style, and
 length, so the next batch is better than the last.
 
-![The Analytics page with retention, CTR, and views broken down by content type, caption style, and length.](/docs/studio-analytics.png)
+![The Analytics page with retention, CTR, and views broken down by content type, caption style, and length.](https://podcli.com/docs/studio-analytics.png)
 
 ## Where to next
 
-- [Tour the studio](/docs/the-studio): every page, one at a time.
-- [CLI reference](/docs/cli): drive the whole pipeline from your terminal.
-- [MCP server](/docs/mcp-server): run it from Claude Code, Codex, or Cursor.
-- [Captions and formats](/docs/captions-and-formats): the four styles and three aspect ratios.
+- [Tour the studio](https://podcli.com/docs/the-studio): every page, one at a time.
+- [CLI reference](https://podcli.com/docs/cli): drive the whole pipeline from your terminal.
+- [MCP server](https://podcli.com/docs/mcp-server): run it from Claude Code, Codex, or Cursor.
+- [Captions and formats](https://podcli.com/docs/captions-and-formats): the four styles and three aspect ratios.

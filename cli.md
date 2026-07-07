@@ -5,7 +5,7 @@ group: Guides
 order: 3
 ---
 
-Everything the [studio](/docs/the-studio) does is available from the terminal.
+Everything the [studio](https://podcli.com/docs/the-studio) does is available from the terminal.
 The one command you need most:
 
 ```bash
@@ -40,7 +40,7 @@ podcli process episode.mp4 --no-thumbnails
 | --- | --- |
 | `--transcript <file>` | Use a `.txt` / `.srt` / `.vtt` transcript instead of transcribing. |
 | `--top <n>` | Cap the number of clips. |
-| `--caption-style <style>` | `branded`, `hormozi`, `karaoke`, or `subtle`. See [captions and formats](/docs/captions-and-formats). |
+| `--caption-style <style>` | `branded`, `hormozi`, `karaoke`, or `subtle`. See [captions and formats](https://podcli.com/docs/captions-and-formats). |
 | `--crop <mode>` | `center`, `face`, or `speaker`. |
 | `--format <ratio>` | `vertical` (9:16), `horizontal` (16:9), or `square` (1:1). |
 | `--logo <asset or file>` | Overlay a logo on every clip. Accepts a registered asset name or a path. |
@@ -64,8 +64,8 @@ podcli process episode.mp4 --preset my-show
 ## Assets
 
 Register logos, outros, intros, and music once, then reference them by name
-anywhere. The same library backs the [studio Assets page](/docs/the-studio#assets)
-and the `manage_assets` [MCP tool](/docs/mcp-server).
+anywhere. The same library backs the [studio Assets page](https://podcli.com/docs/the-studio#assets)
+and the `manage_assets` [MCP tool](https://podcli.com/docs/mcp-server).
 
 ```bash
 podcli assets add my-logo ~/branding/logo.png       # register a file by name

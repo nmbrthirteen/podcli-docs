@@ -6,8 +6,8 @@ order: 4
 ---
 
 Every clip is captioned and cropped to a target aspect ratio. Pick these in the
-[studio](/docs/the-studio) (New episode → Settings), with [CLI flags](/docs/cli),
-or via the `create_clip` [MCP tool](/docs/mcp-server).
+[studio](https://podcli.com/docs/the-studio) (New episode → Settings), with [CLI flags](https://podcli.com/docs/cli),
+or via the `create_clip` [MCP tool](https://podcli.com/docs/mcp-server).
 
 ## Caption styles
 

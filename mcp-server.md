@@ -11,7 +11,7 @@ knowledge base, crop, caption, and export. Say "clip this episode" and it does
 the rest.
 
 For the marketing overview and the full tool list, see the
-[MCP page](/mcp).
+[MCP page](https://podcli.com/mcp).
 
 ## Add it to Claude Code
 
