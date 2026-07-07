@@ -43,9 +43,14 @@ sequence.
 
 ```text
 Transcribe episode-072.mp4 and suggest the top eight clips.
+Register logo.png as my default logo, then render the selected clips with it.
 Render the selected clips in 1080×1920 with the karaoke caption style.
 Check clip 4 against the episode database. Have we shipped anything close before?
 ```
+
+The `manage_assets` tool keeps a shared library of logos, outros, intros, and
+music. Register once and the agent (and the studio and CLI) can reference them
+by name in any render.
 
 ## Privacy
 

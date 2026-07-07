@@ -42,7 +42,8 @@ Prefer the terminal? Everything here also works from the [CLI](/docs/cli).
 
 Open the studio and go to **New episode**. Drag in a local video, or paste a
 YouTube or direct link and Podcli downloads it. Pick a transcript engine
-(Whisper, or paste your own), then set caption style, crop, and format. The
+(Whisper, or paste your own), then set caption style, crop, and format, and drop
+in a logo, intro, or outro from your [brand kit](/docs/the-studio#assets). The
 phone preview updates live.
 
 ![The New episode page: video input, transcript engine, caption and format settings, and a live 9:16 preview.](/docs/studio-new-episode.png)

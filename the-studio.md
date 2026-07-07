@@ -47,6 +47,17 @@ through variations. The chosen thumbnail can be baked into the clip's opening.
 
 ![The Thumbnail studio page](/docs/studio-thumbnails.png)
 
+## Assets
+
+Your reusable brand kit: logos, outros, intros, and background music. Upload a
+file or paste a URL, keep as many as you like, and switch between them anywhere
+they're used. Mark one of each as the default to use it in reels and the
+podcast pipeline without picking it every time. This is also where you set the
+default caption style. Files live under the managed folder, so they travel with
+a config export and are removed on uninstall.
+
+![The Assets page](/docs/studio-assets.png)
+
 ## Knowledge
 
 Your brand brain: voice, banned words, title formulas, and the episode database
