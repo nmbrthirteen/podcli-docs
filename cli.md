@@ -18,10 +18,9 @@ and writes upload-ready clips. Nothing leaves your machine.
 Clip scoring uses Claude Code or Codex login, or an Anthropic API key. Without
 those it falls back to heuristics.
 
-## Headless (next release)
+## Headless
 
-This section describes the next release. Current v2.8.1 prints progress on
-stdout and has no `--json` on `process`.
+Requires podcli 2.8.2 or later.
 
 ```bash
 podcli process episode.mp4 --json --yes
@@ -38,10 +37,10 @@ Exit codes: 0 success, 1 runtime or processing error, 2 usage, 130 interrupted.
 `transcribe`, or `multicam` provisions the engine. `podcli mcp` does not —
 stdout is JSON-RPC — so run `podcli setup` first.
 
-`podcli doctor --json` already exists. The next release adds a `provisioned` map
-(`backend`, `python`, `studio`, `mcp`, `remotion`, `ffmpeg`, `whisper`,
-`node`) next to `version`, `paths`, and `checks`. Only a `"fail"` check makes
-the command exit 1. MCP registration warnings do not.
+`podcli doctor --json` includes a `provisioned` map (`backend`, `python`,
+`studio`, `mcp`, `remotion`, `ffmpeg`, `whisper`, `node`) next to `version`,
+`paths`, and `checks`. Only a `"fail"` check makes the command exit 1. MCP
+registration warnings do not.
 
 ## Common flags
 
@@ -131,8 +130,8 @@ podcli mcp install
 ```
 
 `podcli doctor` prints resolved paths, the interpreter, backend, ffmpeg, and
-models. `--json` writes that as one object. The next release adds a
-`provisioned` map; see [Headless](#headless-next-release).
+models. `--json` writes that as one object, including a `provisioned` map;
+see [Headless](#headless).
 
 `podcli uninstall` removes all managed data by default. Run it with `--dry-run`
 first to preview exactly what will be removed.
