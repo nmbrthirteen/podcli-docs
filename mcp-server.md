@@ -84,17 +84,11 @@ The MCP server runs locally as a process the agent talks to. The video,
 transcript, and renders stay on your machine. The only network calls are the
 optional Claude or Codex API calls when you use AI clip scoring.
 
-## Next release
+## SKILL.md
 
-v2.8.1 exposes 30 tools. The next release adds `rank_clip_candidates` and
-`process_episode` (32 total), ships `SKILL.md`, and documents the headless CLI
-on the [CLI reference](https://podcli.com/docs/cli#headless-next-release). Until
-that ships, the original 30 tools work as they do today.
-
-### SKILL.md
-
-`SKILL.md` in the podcli repo is the agent workflow: setup, the headless CLI,
-and the short MCP path so the agent does not load the full transcript.
+`SKILL.md` in the podcli repo is the agent workflow: setup, the [headless
+CLI](https://podcli.com/docs/cli#headless), and the short MCP path so the agent
+does not load the full transcript.
 
 Prefer the short path:
 
@@ -114,7 +108,9 @@ Do not call `get_ui_state(include_transcript: true)` unless you need to rewrite
 a range; use `rank_clip_candidates`. Do not run `podcli mcp` as the first
 command on a fresh install; run `podcli setup`.
 
-### `rank_clip_candidates`, `process_episode`, and `job_status`
+## `rank_clip_candidates`, `process_episode`, and `job_status`
+
+`rank_clip_candidates` and `process_episode` require podcli 2.8.2 or later.
 
 `rank_clip_candidates` returns a shortlist from the cached transcript so the
 agent does not have to read the whole thing. It does not call an AI CLI.
@@ -123,14 +119,12 @@ agent does not have to read the whole thing. It does not call an AI CLI.
 `{ job_id }` immediately and does not need the studio. The result is the same
 JSON `podcli process --json` prints.
 
-`job_status` already exists. Poll any background job (transcription, render,
-batch export, `process_episode`) with `wait_seconds` (default 30). Stop when
-`done` is true.
+`job_status` polls any background job (transcription, render, batch export,
+`process_episode`) with `wait_seconds` (default 30). Stop when `done` is true.
 
-### Tool reference
+## Tool reference
 
-32 tools, generated from the product repo's docs manifest. v2.8.1 is the same
-list without `rank_clip_candidates` and `process_episode`.
+32 tools, generated from the product repo's docs manifest.
 
 **Transcription and input**
 
