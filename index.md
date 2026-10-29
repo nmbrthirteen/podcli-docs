@@ -13,9 +13,9 @@ This walkthrough covers the whole flow, start to finish.
 
 ## Install
 
-No prerequisites. The installer fetches a self-contained binary, and the first
-run provisions everything it needs (Python, Node, FFmpeg, whisper.cpp, models)
-into a managed folder.
+No prerequisites. The installer fetches a self-contained binary. The first run
+of the studio or `podcli process` provisions Python, Node, FFmpeg, whisper.cpp,
+and models into a managed folder.
 
 **macOS and Linux**
 
@@ -36,7 +36,16 @@ Then run `podcli` and choose Open Web UI. The studio opens at
 podcli
 ```
 
+Runs on macOS (Apple Silicon), Linux (x64 and arm64), and Windows (x64). Intel
+Macs aren't supported. `pip install podcli` on PyPI is a different project.
+
+Clip scoring uses Claude Code or Codex login, or an Anthropic API key. Without
+those it falls back to heuristics. If you are wiring the MCP server, run
+`podcli setup` first — `podcli mcp` does not provision, because stdout is
+JSON-RPC.
+
 Prefer the terminal? Everything here also works from the [CLI](https://podcli.com/docs/cli).
+More on [install](https://podcli.com/docs/install).
 
 ## 1. Drop in your episode
 
@@ -75,6 +84,7 @@ length, so the next batch is better than the last.
 
 ## Where to next
 
+- [Install](https://podcli.com/docs/install): platforms, scoring auth, and the installer.
 - [Tour the studio](https://podcli.com/docs/the-studio): every page, one at a time.
 - [CLI reference](https://podcli.com/docs/cli): drive the whole pipeline from your terminal.
 - [MCP server](https://podcli.com/docs/mcp-server): run it from Claude Code, Codex, or Cursor.

@@ -15,6 +15,34 @@ podcli process episode.mp4
 That transcribes, picks the best moments, crops to the face, burns captions in,
 and writes upload-ready clips. Nothing leaves your machine.
 
+Clip scoring uses Claude Code or Codex login, or an Anthropic API key. Without
+those it falls back to heuristics.
+
+## Headless (next release)
+
+This section describes the next release. Current v2.8.1 prints progress on
+stdout and has no `--json` on `process`.
+
+```bash
+podcli process episode.mp4 --json --yes
+```
+
+One JSON object on stdout: clip paths, durations, scores, titles, descriptions,
+tags, caption files. Logs go to stderr. `-y` / `--yes` skips prompts.
+
+`NO_COLOR=1` or a non-TTY stdout turns off colour and spinners.
+
+Exit codes: 0 success, 1 runtime or processing error, 2 usage, 130 interrupted.
+
+`--help` and `--version` never download. First run of `process`, `studio`,
+`transcribe`, or `multicam` provisions the engine. `podcli mcp` does not —
+stdout is JSON-RPC — so run `podcli setup` first.
+
+`podcli doctor --json` already exists. The next release adds a `provisioned` map
+(`backend`, `python`, `studio`, `mcp`, `remotion`, `ffmpeg`, `whisper`,
+`node`) next to `version`, `paths`, and `checks`. Only a `"fail"` check makes
+the command exit 1. MCP registration warnings do not.
+
 ## Common flags
 
 Use an existing transcript instead of transcribing, and cap the clip count:
@@ -93,6 +121,18 @@ studio directly at `localhost:3847`.
 podcli
 podcli ui
 ```
+
+`podcli setup` provisions runtimes and models. `podcli mcp` does not, because
+stdout is JSON-RPC — run setup first, then register the server.
+
+```bash
+podcli setup
+podcli mcp install
+```
+
+`podcli doctor` prints resolved paths, the interpreter, backend, ffmpeg, and
+models. `--json` writes that as one object. The next release adds a
+`provisioned` map; see [Headless](#headless-next-release).
 
 `podcli uninstall` removes all managed data by default. Run it with `--dry-run`
 first to preview exactly what will be removed.
